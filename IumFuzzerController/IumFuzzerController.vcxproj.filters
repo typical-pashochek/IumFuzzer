@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\interface">
+      <UniqueIdentifier>{4583b65e-71d5-4657-83cc-2e10480c491e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\interface">
+      <UniqueIdentifier>{20efbd02-4b27-48b6-9e0a-759706b10c03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\FuzzInputParser">
+      <UniqueIdentifier>{10bdda72-d0ca-4e83-8242-deec3c8d3f05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\FuzzInputParser">
+      <UniqueIdentifier>{bd8ba7f7-f071-42c1-94d3-1f470ba6012e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\CaseGenerator">
+      <UniqueIdentifier>{364e1c51-6676-4331-9245-4790a28b1243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\CaseGenerator">
+      <UniqueIdentifier>{f7c35f36-6f5e-4470-86f7-3e4ab1ffeea1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Logger">
+      <UniqueIdentifier>{708592d9-d6a6-4540-a2c3-2847fe146f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Logger">
+      <UniqueIdentifier>{47b69468-63e0-4f9d-beb5-3b4302c0fc21}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IumFuzzerController.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\interface\IumFuzzer_c.c">
+      <Filter>Исходные файлы\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzInputParser\FuzzInputParser.cpp">
+      <Filter>Исходные файлы\FuzzInputParser</Filter>
+    </ClCompile>
+    <ClCompile Include="CaseGenerator\CaseGenerator.cpp">
+      <Filter>Исходные файлы\CaseGenerator</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger\Logger.cpp">
+      <Filter>Исходные файлы\Logger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IumFuzzerController.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\interface\IumFuzzer.h">
+      <Filter>Файлы заголовков\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzInputParser\FuzzInputParser.h">
+      <Filter>Файлы заголовков\FuzzInputParser</Filter>
+    </ClInclude>
+    <ClInclude Include="CaseGenerator\CaseGenerator.h">
+      <Filter>Файлы заголовков\CaseGenerator</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger\Logger.h">
+      <Filter>Файлы заголовков\Logger</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

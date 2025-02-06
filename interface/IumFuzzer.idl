@@ -1,0 +1,58 @@
+[
+	// Interface unique GUID
+    uuid(12345678-1234-1234-1234-1234567890AB),
+    
+	// Interface version
+	version(1.0)
+]
+
+interface IumFuzzer {
+	typedef unsigned __int64    UINT64;
+	
+	typedef struct 
+    {
+        unsigned long bufferLength;
+        [unique, size_is(bufferLength)] byte *buffer;
+
+    } IDENTITY_KEY;
+		
+	typedef struct 
+    {
+        UINT64 size;
+		char value[0x1000];
+    } IUM_SYSTEM_CALL_ARG;
+	
+	typedef struct 
+    {
+        UINT64 scn;
+		UINT64 argsCount;
+        IUM_SYSTEM_CALL_ARG args[12];
+    } IUM_SYSTEM_CALL_DATA;
+	
+	// say hello
+    void SendData(
+		[in, string] const char* data
+	);
+	
+	// receive hello
+    void ReceiveData(
+		[out, string] char** pData
+	);
+	
+	// terminate trustlet process
+    void Terminate(
+        [in] unsigned long code
+    );
+	
+	// get trustlet identity key
+    error_status_t GetIdentityKey(
+        [out] IDENTITY_KEY *pKey
+    );
+	
+	// do IUM system call
+	
+	UINT64 IumSystemCall(
+        [in] IUM_SYSTEM_CALL_DATA *pData
+    );
+	
+}
